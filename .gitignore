@@ -24,9 +24,6 @@
 *.log
 /log
 
-# Java classes
-*.class
-
 # Python bytecode
 __pycache__/
 *.pyc

@@ -1,0 +1,75 @@
+#define UART_BAUD_RATE	57600
+
+int main(void)
+{
+	char c,del = 10;
+
+	INIT();
+	UART_INIT(UART_BAUD_RATE);	
+	MOTORINIT();
+//	LCD_INIT(LCD_DISP_ON);
+	
+	UART_PRINT("SKYPE DRONE");
+//	LCD_HOME_POS();
+//	LCD_PRINT("SKYPE DRONE 1.0");
+//	LCD_GOTOXY(1,2);
+//	LCD_PRINT("by Daniel, 2013");
+	
+	while(1)
+	{
+		c=UART_GETCHAR();
+//      LCD_CLRSCRN();
+//		LCD_PUTC(c);
+		
+		if(c=='1')
+		{
+			FORWARD(100);
+		}
+		
+		else if(c=='2')
+		{
+			LMS();
+			RMF(100);
+		}
+		
+		else if(c=='3')
+		{
+			LMF(100);
+			RMS();
+		}
+		
+		else if(c=='4')
+		{
+			BACKWARD(100);
+		}
+		else if(c=='5')
+		{
+			LMB(100);
+			RMS();
+		}
+		
+		else if(c=='6')
+		{
+			LMS();
+			RMB(100);
+		}
+		else if(c=='7')
+		{
+			LMB(100);
+			RMF(100);
+		}
+		
+		else if(c=='8')
+		{
+			LMF(100);
+			RMB(100);		
+		}
+		
+		else if (c=='9')
+		{
+			STOP();
+		}
+
+		DELAYMS(10);
+	}
+}

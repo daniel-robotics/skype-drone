@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>SkypeDroneController</label>
+		<id>276</id>
+		<version>0</version>
+	</settings>
+	<users>
+		<user>
+			<path>SkypeDroneController.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>SkypeDroneController.jcp</path>
+		</project>
+	</projects>
+</workspace>
